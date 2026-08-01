@@ -1,13 +1,355 @@
----
-layout: presentation
----
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>المعهد المتخصص للتكنولوجيا التطبيقية تفراوت</title>
+  <meta name="description" content="الموقع الرسمي للمعهد المتخصص للتكنولوجيا التطبيقية بتفراوت — الشعب والتخصصات، شروط وتواريخ التسجيل، آخر أخبار التكوين وفضاءات المعهد.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Kufi+Arabic:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/institute/style.css">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231f6f8b'/%3E%3Ctext x='16' y='23' font-size='18' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'%3E%D9%85%3C/text%3E%3C/svg%3E">
+  <style>body{font-family:"Noto Kufi Arabic","Segoe UI",Tahoma,sans-serif}</style>
+</head>
+<body>
 
-{% for post in site.posts reversed %}
-	{% include slide.html %}
-	<div class="page-break"></div>
-{% endfor %}
-{% unless site.simple-slideshow %}
-{% if site.overview %}
-<section id="overview" class="step" {% for attr in site.overview-data %} data-{{attr[0]}}="{{attr[1]}}"{% endfor %}></section>
-{% endif %}
-{% endunless %}
+  <!-- Top bar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="tb-contact">
+        <span>📍 تفراوت، إقليم تيزنيت — جهة سوس ماسة</span>
+        <span>✉️ contact@ista-tafraout.ma</span>
+        <span>☎️ 05 28 00 00 00</span>
+      </div>
+      <div class="tb-social">
+        <a href="#" aria-label="فيسبوك">فيسبوك</a>
+        <a href="#" aria-label="انستغرام">انستغرام</a>
+        <a href="#" aria-label="يوتيوب">يوتيوب</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav">
+      <a class="brand" href="#">
+        <span class="logo">م.ت</span>
+        <span>
+          <b>المعهد المتخصص للتكنولوجيا التطبيقية</b>
+          <span>تفراوت — التكوين المهني</span>
+        </span>
+      </a>
+      <nav>
+        <ul class="menu" id="menu">
+          <li><a href="#accueil">الرئيسية</a></li>
+          <li><a href="#programs">الشعب</a></li>
+          <li><a href="#registration">شروط التسجيل</a></li>
+          <li><a href="#dates">التواريخ</a></li>
+          <li><a href="#news">آخر الأخبار</a></li>
+          <li><a href="#facilities">فضاءات المعهد</a></li>
+          <li><a href="#contact">اتصل بنا</a></li>
+        </ul>
+      </nav>
+      <a href="#registration" class="cta">سجّل الآن</a>
+      <button class="burger" aria-label="القائمة" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="accueil">
+    <div class="container">
+      <div class="hero-text reveal">
+        <span class="eyebrow">موسم التكوين 2026 / 2027</span>
+        <h1>تعلّم مهارات <span class="hl">الغد</span> في قلب تفراوت</h1>
+        <p class="lead">
+          المعهد المتخصص للتكنولوجيا التطبيقية بتفراوت يفتح أمامك أبواب تكوين مهني عصري
+          وشعب متنوعة تواكب حاجيات سوق الشغل، في بيئة تعليمية محفّزة وفضاءات مجهّزة.
+        </p>
+        <div class="hero-actions">
+          <a href="#programs" class="btn btn-primary">اكتشف الشعب المتوفرة</a>
+          <a href="#registration" class="btn btn-ghost">شروط وتواريخ التسجيل</a>
+        </div>
+        <div class="hero-badges">
+          <span class="b">✔ دبلومات معترف بها</span>
+          <span class="b">✔ تداريب في المقاولات</span>
+          <span class="b">✔ تأطير بيداغوجي متميّز</span>
+        </div>
+      </div>
+      <div class="hero-figure reveal">
+        <img src="assets/institute/img/hero.svg" alt="المعهد المتخصص للتكنولوجيا التطبيقية بتفراوت وسط جبال الأطلس الصغير الوردية" loading="eager">
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="container">
+    <div class="stats reveal">
+      <div class="stat"><b data-count="6">0</b><span>شعب للتكوين</span></div>
+      <div class="stat"><b data-count="850" data-suffix="+">0</b><span>متدرّب ومتدرّبة</span></div>
+      <div class="stat"><b data-count="92" data-suffix="%">0</b><span>نسبة الإدماج المهني</span></div>
+      <div class="stat"><b data-count="40" data-suffix="+">0</b><span>مقاولة شريكة</span></div>
+    </div>
+  </div>
+
+  <!-- Programs -->
+  <section class="section" id="programs">
+    <div class="container">
+      <div class="center reveal" style="margin-bottom:40px">
+        <span class="eyebrow">الشعب والتخصصات</span>
+        <h2 class="section-title">شعب تكوينية تواكب سوق الشغل</h2>
+        <p class="section-lead">مجموعة من الشعب في مستويات <b>تقني متخصص</b> و<b>تقني</b> و<b>التأهيل</b>، مصمّمة لتزويدك بمهارات عملية قابلة للتوظيف مباشرة.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <!-- Digital -->
+        <article class="card reveal">
+          <div class="prog-ico" style="background:linear-gradient(135deg,#1f6f8b,#2b8fb3)">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/><path d="M7 9l2 2-2 2M12 13h4"/></svg>
+          </div>
+          <h3>التطوير الرقمي</h3>
+          <p>تطوير المواقع والتطبيقات، قواعد البيانات، ولغات البرمجة الحديثة لتصبح مطوّرًا محترفًا.</p>
+          <div class="meta"><span class="chip dip">تقني متخصص</span><span class="chip">Bac+2</span><span class="chip">سنتان</span></div>
+        </article>
+
+        <!-- Networks -->
+        <article class="card reveal">
+          <div class="prog-ico" style="background:linear-gradient(135deg,#2f7d49,#1f5a34)">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="M12 7v4M12 11l-6 6M12 11l6 6"/></svg>
+          </div>
+          <h3>الأنظمة والشبكات المعلوماتية</h3>
+          <p>تركيب وتدبير الشبكات، أنظمة التشغيل، الأمن المعلوماتي، والبنيات التحتية الرقمية.</p>
+          <div class="meta"><span class="chip dip">تقني متخصص</span><span class="chip">Bac+2</span><span class="chip">سنتان</span></div>
+        </article>
+
+        <!-- Management -->
+        <article class="card reveal">
+          <div class="prog-ico" style="background:linear-gradient(135deg,#c96a54,#8f3f2c)">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg>
+          </div>
+          <h3>التدبير والتجارة</h3>
+          <p>تقنيات التسيير، المحاسبة، التسويق والتواصل التجاري لتأطير المقاولات وتنمية المبيعات.</p>
+          <div class="meta"><span class="chip dip">تقني متخصص</span><span class="chip">Bac</span><span class="chip">سنتان</span></div>
+        </article>
+
+        <!-- Tourism -->
+        <article class="card reveal">
+          <div class="prog-ico" style="background:linear-gradient(135deg,#f6a821,#d98b1e)">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13"/><path d="M9 21v-6h6v6"/></svg>
+          </div>
+          <h3>السياحة والفندقة</h3>
+          <p>الاستقبال، التنشيط السياحي وتدبير المؤسسات الفندقية — تثمينًا لمؤهلات تفراوت السياحية.</p>
+          <div class="meta"><span class="chip dip">تقني</span><span class="chip">مستوى الجذع المشترك</span><span class="chip">سنتان</span></div>
+        </article>
+
+        <!-- Electromechanical / Renewable -->
+        <article class="card reveal">
+          <div class="prog-ico" style="background:linear-gradient(135deg,#5a6b78,#2f4858)">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/></svg>
+          </div>
+          <h3>الكهرباء والطاقات المتجددة</h3>
+          <p>التركيبات الكهربائية، الطاقة الشمسية والصيانة الصناعية لمواكبة مشاريع الطاقة النظيفة.</p>
+          <div class="meta"><span class="chip dip">تقني</span><span class="chip">مستوى التأهيل</span><span class="chip">سنتان</span></div>
+        </article>
+
+        <!-- Agriculture / Argan -->
+        <article class="card reveal">
+          <div class="prog-ico" style="background:linear-gradient(135deg,#2f7d49,#5aa06a)">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22V12M12 12C12 7 8 4 4 4c0 5 4 8 8 8zM12 12c0-4 3-7 8-7 0 4-3 7-8 7z"/></svg>
+          </div>
+          <h3>التقنيات الفلاحية وتثمين المنتجات المحلية</h3>
+          <p>تقنيات الإنتاج الفلاحي وتثمين المنتوجات المجالية (الأركان واللوز) في إطار الاقتصاد التضامني.</p>
+          <div class="meta"><span class="chip dip">تأهيل</span><span class="chip">مستوى الثالثة إعدادي</span><span class="chip">سنة إلى سنتين</span></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Registration -->
+  <section class="section section-alt" id="registration">
+    <div class="container">
+      <div class="center reveal" style="margin-bottom:40px">
+        <span class="eyebrow">شروط ومسطرة التسجيل</span>
+        <h2 class="section-title">كيف تلتحق بالمعهد؟</h2>
+        <p class="section-lead">يتم التسجيل الأولي عبر بوابة التوجيه الإلكترونية للتكوين المهني، ثم استكمال المسطرة بالمعهد.</p>
+      </div>
+
+      <div class="reg">
+        <ol class="steps reveal">
+          <li>
+            <b>التسجيل الإلكتروني</b>
+            <span>ملء طلب الترشيح عبر البوابة الرسمية للتكوين المهني واختيار الشعبة والمعهد.</span>
+          </li>
+          <li>
+            <b>انتقاء الترشيحات</b>
+            <span>دراسة الملفات حسب المعدلات والمعايير المعتمدة لكل شعبة، ونشر لوائح المقبولين.</span>
+          </li>
+          <li>
+            <b>إيداع ملف التسجيل</b>
+            <span>تقديم الوثائق المطلوبة بمقر المعهد داخل الآجال المحددة لتأكيد المقعد.</span>
+          </li>
+          <li>
+            <b>بداية التكوين</b>
+            <span>الانطلاق الفعلي للدروس والتداريب حسب الرزنامة البيداغوجية للموسم.</span>
+          </li>
+        </ol>
+
+        <aside class="reg-card reveal">
+          <h3>الوثائق والشروط المطلوبة</h3>
+          <ul>
+            <li><span class="ok">✓</span> نسخة من البطاقة الوطنية للتعريف.</li>
+            <li><span class="ok">✓</span> نسخ مصادق عليها من الشهادات والكشوفات (حسب الشعبة).</li>
+            <li><span class="ok">✓</span> شهادة مدرسية أو شهادة النجاح.</li>
+            <li><span class="ok">✓</span> نسخة من رسم الازدياد.</li>
+            <li><span class="ok">✓</span> صور شمسية حديثة.</li>
+            <li><span class="ok">✓</span> السن المطلوب: بين 15 و 30 سنة حسب المستوى.</li>
+          </ul>
+          <a href="#contact" class="btn">ابدأ طلب التسجيل</a>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dates -->
+  <section class="section" id="dates">
+    <div class="container">
+      <div class="center reveal" style="margin-bottom:40px">
+        <span class="eyebrow">التواريخ المهمة</span>
+        <h2 class="section-title">رزنامة موسم 2026 / 2027</h2>
+        <p class="section-lead">تواريخ إرشادية للموسم التكويني — يُرجى تتبّع الإعلانات الرسمية للمعهد للتأكد من المواعيد النهائية.</p>
+      </div>
+
+      <div class="dates">
+        <div class="date reveal"><div class="d">يونيو – يوليوز</div><b>فتح التسجيل الإلكتروني</b><span>ملء طلبات الترشيح عبر البوابة الرقمية.</span></div>
+        <div class="date reveal"><div class="d">يوليوز</div><b>الانتقاء والاختبارات</b><span>دراسة الملفات واجتياز الاختبارات عند الاقتضاء.</span></div>
+        <div class="date reveal"><div class="d">شتنبر</div><b>إعلان النتائج والتسجيل</b><span>نشر لوائح المقبولين وإيداع ملفات التسجيل النهائي.</span></div>
+        <div class="date reveal"><div class="d">أكتوبر</div><b>انطلاق الدروس</b><span>بداية الموسم التكويني والحصص التطبيقية.</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- News -->
+  <section class="section section-alt" id="news">
+    <div class="container">
+      <div class="center reveal" style="margin-bottom:40px">
+        <span class="eyebrow">آخر أخبار التكوين</span>
+        <h2 class="section-title">مستجدّات المعهد</h2>
+        <p class="section-lead">تابع آخر الأنشطة والإعلانات المتعلقة بالتكوين والحياة المدرسية بالمعهد.</p>
+      </div>
+
+      <div class="news grid grid-3">
+        <article class="card reveal">
+          <div class="thumb"><span class="tag">تسجيل</span></div>
+          <div class="body">
+            <span class="date-s">15 يونيو 2026</span>
+            <h3>انطلاق التسجيل الإلكتروني لموسم 2026/2027</h3>
+            <p>فُتحت بوابة الترشيح لجميع الشعب المتوفرة بالمعهد. سارع بتسجيل طلبك قبل انتهاء الآجال.</p>
+            <a href="#registration" class="more">اقرأ المزيد ←</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="thumb g2"><span class="tag">شراكة</span></div>
+          <div class="body">
+            <span class="date-s">2 ماي 2026</span>
+            <h3>اتفاقية شراكة جديدة مع مقاولات جهوية</h3>
+            <p>توقيع اتفاقيات لتعزيز التداريب التطبيقية وتيسير الإدماج المهني لخريجي المعهد.</p>
+            <a href="#" class="more">اقرأ المزيد ←</a>
+          </div>
+        </article>
+
+        <article class="card reveal">
+          <div class="thumb g3"><span class="tag">حدث</span></div>
+          <div class="body">
+            <span class="date-s">18 أبريل 2026</span>
+            <h3>أبواب مفتوحة للتعريف بالشعب والتخصصات</h3>
+            <p>يوم تواصلي لاستقبال التلاميذ والأولياء والتعريف بمسارات التكوين وفضاءات المعهد.</p>
+            <a href="#facilities" class="more">اقرأ المزيد ←</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Facilities -->
+  <section class="section" id="facilities">
+    <div class="container">
+      <div class="center reveal" style="margin-bottom:40px">
+        <span class="eyebrow">فضاءات المعهد</span>
+        <h2 class="section-title">بيئة تكوين مجهّزة ومحفّزة</h2>
+        <p class="section-lead">فضاءات بيداغوجية وتقنية حديثة توفّر أفضل ظروف التعلّم والتدريب العملي.</p>
+      </div>
+
+      <div class="fac">
+        <figure class="reveal">
+          <img src="assets/institute/img/facility-lab.svg" alt="قاعة المعلوميات">
+          <figcaption><b>قاعات المعلوميات</b><p>حواسيب حديثة وربط بالأنترنت لتعلّم البرمجة والشبكات.</p></figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="assets/institute/img/facility-workshop.svg" alt="ورشة تقنية">
+          <figcaption><b>الورشات التقنية</b><p>تجهيزات للتدريب العملي في التخصصات الصناعية والتقنية.</p></figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="assets/institute/img/facility-library.svg" alt="الخزانة الوسائطية">
+          <figcaption><b>الخزانة الوسائطية</b><p>مصادر ووثائق ومراجع لدعم البحث والتعلّم الذاتي.</p></figcaption>
+        </figure>
+        <figure class="reveal">
+          <img src="assets/institute/img/facility-classroom.svg" alt="قاعة الدروس">
+          <figcaption><b>قاعات الدروس</b><p>فضاءات مريحة ومجهّزة بالوسائل السمعية البصرية.</p></figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA band -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="band reveal">
+        <h2>هل أنت مستعد لبناء مستقبلك المهني؟</h2>
+        <p>انضم إلى المعهد المتخصص للتكنولوجيا التطبيقية بتفراوت وابدأ رحلتك نحو مهنة المستقبل.</p>
+        <a href="#registration" class="btn">سجّل الآن</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="cols">
+        <div class="fbrand">
+          <b>المعهد المتخصص للتكنولوجيا التطبيقية — تفراوت</b>
+          <p>مؤسسة للتكوين المهني تُعنى بإعداد كفاءات مؤهّلة في مختلف الشعب لمواكبة حاجيات سوق الشغل بجهة سوس ماسة.</p>
+        </div>
+        <div>
+          <h4>روابط سريعة</h4>
+          <a href="#programs">الشعب المتوفرة</a>
+          <a href="#registration">شروط التسجيل</a>
+          <a href="#dates">التواريخ المهمة</a>
+          <a href="#news">آخر الأخبار</a>
+        </div>
+        <div>
+          <h4>الشعب</h4>
+          <a href="#programs">التطوير الرقمي</a>
+          <a href="#programs">الأنظمة والشبكات</a>
+          <a href="#programs">التدبير والتجارة</a>
+          <a href="#programs">السياحة والفندقة</a>
+        </div>
+        <div>
+          <h4>اتصل بنا</h4>
+          <div class="contact-line">📍 تفراوت، إقليم تيزنيت — جهة سوس ماسة</div>
+          <div class="contact-line">☎️ 05 28 00 00 00</div>
+          <div class="contact-line">✉️ contact@ista-tafraout.ma</div>
+        </div>
+      </div>
+      <div class="bottom">
+        © <span id="year">2026</span> المعهد المتخصص للتكنولوجيا التطبيقية بتفراوت. جميع الحقوق محفوظة.
+        &nbsp;•&nbsp; موقع تعريفي — للمعلومات الرسمية يُرجى الاتصال بإدارة المعهد.
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/institute/main.js"></script>
+</body>
+</html>
