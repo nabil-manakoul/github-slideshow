@@ -102,6 +102,16 @@ h1,h2,h3{line-height:1.3;margin:0 0 .5em}
 .chip.dip{background:#fdeee9;color:var(--accent)}
 .card p{color:var(--muted);margin:.4em 0 0}
 
+/* ===== Level groups ===== */
+.level-group{margin-top:30px}
+.level-head{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin-bottom:16px;padding-bottom:10px;border-bottom:2px dashed var(--line)}
+.level-badge{color:#fff;font-weight:900;padding:8px 18px;border-radius:12px;font-size:1.02rem;box-shadow:var(--shadow-sm)}
+.level-badge.ts{background:linear-gradient(135deg,#1f6f8b,#2b8fb3)}
+.level-badge.tc{background:linear-gradient(135deg,#2f7d49,#1f5a34)}
+.level-badge.qa{background:linear-gradient(135deg,#c96a54,#8f3f2c)}
+.level-badge.sp{background:linear-gradient(135deg,#5a6b78,#2f4858)}
+.level-note{color:var(--muted);font-weight:600;font-size:.92rem}
+
 /* ===== Facilities ===== */
 .fac{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 .fac figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow-sm);transition:.25s}
