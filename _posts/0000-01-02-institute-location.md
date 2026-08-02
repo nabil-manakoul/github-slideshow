@@ -3,7 +3,7 @@ layout: slide
 title: "المعهد المتخصص للتكنولوجيا التطبيقية تافراوت"
 ---
 
-<div dir="rtl" style="text-align:right">
+<div dir="rtl" style="text-align:right" markdown="1">
 
 **🏛️ المعهد:** المعهد المتخصص للتكنولوجيا التطبيقية تافراوت
 
