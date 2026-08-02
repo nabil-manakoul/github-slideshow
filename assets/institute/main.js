@@ -56,6 +56,26 @@
   var y = document.getElementById('year');
   if(y) y.textContent = new Date().getFullYear();
 
+  // Contact form -> compose email
+  var form = document.getElementById('contactForm');
+  if(form){
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      if(!form.checkValidity()){ form.reportValidity(); return; }
+      var g = function(id){ var el = document.getElementById(id); return el ? el.value.trim() : ''; };
+      var subject = 'رسالة من الموقع: ' + (g('cf-subject') || 'استفسار');
+      var body =
+        'الاسم: ' + g('cf-name') + '\n' +
+        'البريد: ' + g('cf-email') + '\n' +
+        'الهاتف: ' + g('cf-phone') + '\n\n' +
+        g('cf-message');
+      var mail = 'mailto:contact@ista-tafraout.ma?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+      var status = document.getElementById('formStatus');
+      if(status) status.classList.add('show');
+      window.location.href = mail;
+    });
+  }
+
   // ===== Interactive lightbox for galleries =====
   var galleryEls = Array.prototype.slice.call(document.querySelectorAll('.gallery, .mosaic'));
   var allFigures = [];
